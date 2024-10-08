@@ -1,1 +1,27 @@
+## 2중 배열을 위해 reshape() 사용
+## 기존 배열 크기 확인 코드
+test_array = np.array([1, 2, 3, 4])
+print(test_array.shape)
+
+>> (4, )
+
+## reshape() 함수 사용 코드
+test_array = test_array.reshape(2, 2)
+print(test_array.shape)
+
+>> (2, 2)
+
+
+## 결정계수 (R^2)
+## k-최근접 이웃 회귀 알고리즘을 구현한 클래스는 KNeighborsRegresso.
+## 객체 생성 후 fit() 함수로 훈련.
+from sklearn.neighbors import KNeighborsRegressor
+
+knr = KNeighborsRegressor()
+
+knr.fit(train_input, train_target)
+print(knr.score(test_input, test_target))
+
+>> 0.992809406101064
+## 이게 분류에선 '정확도'를 나타내고 회귀에서는 '결정계수'를 나타낸다.
 
